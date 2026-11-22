@@ -21,6 +21,7 @@ panel decides. `public/js/consent.js` (deferred, printed by the partial) defines
 | `undecided()` | Whether the visitor has not answered yet |
 | `refused()`, `accepted()` | The site's own feature refused; not refused |
 | `accept()`, `refuse()` | Answers for the visitor |
+| `grant(name)` | Turns one declared feature on, the others keeping their answer: the visitor's yes given where it is asked (a film's own "Play"). `true` once it is on, `false` for a feature nobody declared |
 | `open()`, `close()` | Opens the panel; closes it (not while the question is pending) |
 | `scan(root)` | Looks for the elements that wait for a feature again (after a part of the page was replaced) |
 
@@ -37,7 +38,7 @@ cookie is declared under a feature (`storage`), whose answer then decides.
 
 The page's scripts run before the library is there (the bundle's comes first):
 until then `Consent` answers from what the browser already holds
-(`localStorage` `cookie/<GROUP>`), and `use()`, `cookie()`, `accept()`, `refuse()`,
+(`localStorage` `cookie/<GROUP>`), and `use()`, `cookie()`, `accept()`, `refuse()`, `grant()`,
 `open()`, `close()` and `scan()` are kept and made once the page's scripts have
 all run.
 

@@ -387,6 +387,13 @@
         accepted: function () { return Module.state(primary()) !== false; },
         accept: function () { Module.accept(); },
         refuse: function () { Module.refuse(); },
+        // One feature on, the visitor's yes given where it is asked (a film's own "Play"): the others keep their answer.
+        grant: function (name) {
+            name = upper(name);
+            if (!name || !Module.category(name)) return false;
+            Module.grant(name);
+            return Module.granted(name);
+        },
         open: function () {
             if (!banner() || banner().hidden) seat(front());
             Module.open();
@@ -424,7 +431,7 @@
         undecided: function () { return kept(primary()) === null; },
         refused: function () { return kept(primary()) === false; },
         accepted: function () { return kept(primary()) !== false; },
-        accept: wait('accept'), refuse: wait('refuse'), open: wait('open'), close: wait('close'), scan: wait('scan')
+        accept: wait('accept'), refuse: wait('refuse'), grant: wait('grant'), open: wait('open'), close: wait('close'), scan: wait('scan')
     };
 
     var impl = early;

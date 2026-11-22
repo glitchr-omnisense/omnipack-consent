@@ -218,6 +218,7 @@ window.Consent.enabled('CHAT')  // what to do now: an implicit feature is on unt
 window.Consent.features()       // every feature, its label and state
 window.Consent.refused()        // the site's own cookies refused, e.g. before writing a preference
 window.Consent.accept(); window.Consent.refuse(); window.Consent.open(); window.Consent.close();
+window.Consent.grant('MEDIA')    // one feature on, asked where it is needed (a film's "Play"); the others keep their answer
 window.addEventListener('consent:change', (e) => e.detail.features); // {USER: true, CHAT: false...}
 document.addEventListener('chat:consent', () => {});               // a feature just turned on
 ```
