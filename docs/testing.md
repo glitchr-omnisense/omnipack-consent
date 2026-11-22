@@ -41,7 +41,7 @@ omnisense/omnibase's harness (`docker/`) runs the PHP suite with this checkout
 mounted in place of the package:
 
 ```bash
-docker compose -f compose.yml run --rm -v /path/to/consent:/srv/demo/vendor/omnibase/consent omnibase test consent
+docker compose -f compose.yml run --rm -v /path/to/consent:/srv/demo/vendor/omnipack/consent omnibase test consent
 ```
 
 ## In a site's tests

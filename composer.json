@@ -1,9 +1,14 @@
 {
-    "name": "omnibase/consent",
+    "name": "omnipack/consent",
     "description": "The cookie answer of every omnibase site, in one place: a small circle, a panel, the features the visitor answers for and what each keeps, a countdown, on @glitchr/flowjs/cookie.",
     "type": "symfony-bundle",
     "license": "MIT",
-    "authors": [{"name": "Marco Meyer", "email": "marco.meyer@glitchr.io"}],
+    "authors": [
+        {
+            "name": "Marco Meyer",
+            "email": "marco.meyer@glitchr.io"
+        }
+    ],
     "require": {
         "php": "^8.2",
         "omnisense/omnibase": "^7.0",
@@ -13,14 +18,21 @@
         "omnibridge/symfony": "^3.0",
         "phpunit/phpunit": "^11.5|^12.0"
     },
+    "replace": {
+        "omnibase/consent": "self.version"
+    },
     "suggest": {
         "omnibridge/symfony": "^3.0"
     },
     "autoload": {
-        "psr-4": {"Base\\Consent\\": "./src"}
+        "psr-4": {
+            "Base\\Consent\\": "./src"
+        }
     },
     "autoload-dev": {
-        "psr-4": {"Base\\Consent\\Tests\\": "./tests"}
+        "psr-4": {
+            "Base\\Consent\\Tests\\": "./tests"
+        }
     },
     "extra": {
         "branch-alias": {

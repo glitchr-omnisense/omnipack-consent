@@ -1,4 +1,4 @@
-# omnibase/consent
+# omnipack/consent
 
 The cookie answer of the omnibase sites, written once: a small circle that opens
 a panel - what the site keeps, **accept**, **refuse**, **customize** - instead of

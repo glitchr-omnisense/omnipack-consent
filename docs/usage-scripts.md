@@ -54,7 +54,7 @@ window.addEventListener('consent:change', (e) => e.detail.features);
 document.addEventListener('chat:consent', () => loadCrisp());
 ```
 
-omnibase/social loads Instagram on `social:consent`.
+omnipack/social loads Instagram on `social:consent`.
 
 ## Elements that wait for a feature
 

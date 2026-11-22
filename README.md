@@ -45,7 +45,7 @@ controller in every site.
 ## Install
 
 ```bash
-composer require omnibase/consent
+composer require omnipack/consent
 ```
 
 Under Symfony it runs on the core's Symfony host (`composer require omnibridge/symfony` if the
@@ -105,7 +105,7 @@ consent:
     features:
         LOCATION: false          # one of the bundle's taken out (the time zone then goes with USER)
         CHAT: { erase: [crisp-client] }     # a third party's cookies, by name prefix
-        SOCIAL: ~                # omnibase/social loads Instagram on the `social:consent` event this sends
+        SOCIAL: ~                # omnipack/social loads Instagram on the `social:consent` event this sends
         ANALYTICS:               # what it keeps: listed in the detailed section, erased at a refusal
             storage:
                 - { name: '_pk_*', duration: 13mo, purpose: 'Matomo' }
@@ -274,7 +274,7 @@ vendor/bin/phpunit          # the configuration, what the partial prints, every 
 In omnibase's harness (`omnisense/omnibase`, `docker/`), on this checkout:
 
 ```bash
-docker compose -f compose.yml run --rm -v /path/to/consent:/srv/demo/vendor/omnibase/consent omnibase test consent
+docker compose -f compose.yml run --rm -v /path/to/consent:/srv/demo/vendor/omnipack/consent omnibase test consent
 ```
 
 ## License

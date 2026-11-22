@@ -16,7 +16,7 @@ the page needs `@glitchr/flowjs` 1.2.0 or later for its `Cookie` global: omnibas
 ## Under Symfony
 
 ```bash
-composer require omnibase/consent
+composer require omnipack/consent
 ```
 
 ```php
