@@ -1,6 +1,6 @@
 # Changelog
 
-## 2.2.0 - unreleased
+## 2.2.0
 
 - `Consent.grant(name)`: one declared feature on, the others keeping their answer - the visitor's yes given where it
   is asked rather than in the panel (omnipack/music's films: "Played by YouTube... Play"). Queued like `accept()` when
