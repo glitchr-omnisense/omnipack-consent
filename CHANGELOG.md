@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.2.1
+
+- The floating panel no longer moves for Symfony's web debug toolbar: nothing of the page reacts to the profiler. The
+  panel stays where `consent.position` puts it, the toolbar open or closed; making way is the toolbar's to do
+  (glitchr/symfony-profiler-pack's floating toolbar steps aside for the page's panels).
+
 ## 2.2.0
 
 - `Consent.grant(name)`: one declared feature on, the others keeping their answer - the visitor's yes given where it
